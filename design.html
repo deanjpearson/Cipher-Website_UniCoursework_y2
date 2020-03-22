@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Cipher Coursework</title>
+    <meta name="Description"
+          content="Details of the design process and standards used to create this website.. This is part of a university coursework.">
+    <meta name="Keywords" content="cipher, encrypt, decrypt, napier, university, cypher, design, development">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="css/prism.css" rel="stylesheet">
+    <script src="js/prism.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+
+<!-- Header and navigation bar -->
+<header>
+    <a href="index.html"><img src="images/logo.png" alt="logo that reads 'Cipher your secrets'"></a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="design.html" class="active">Design</a></li>
+            <li><a href="caesar.html">Caesar Cipher</a></li>
+            <li><a href="mirror.html">Mirror Writing Cipher</a></li>
+            <li><a href="atbash.html">Atbash Cipher</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<div id="main_content">
+    <!-- Main container -->
+    <div id="maincontainer">
+        <h1 class="title">Design Decisions</h1>
+        <p>
+            This design page will walk you through the design standards that are in place within the website.
+            It describes everything from the coding style to colors being used.
+        </p>
+        <ol>
+            <li>Coding Style</li>
+            <li>Layout</li>
+            <li>Navigation</li>
+            <li>User Inputs</li>
+            <li>Typeography</li>
+            <li>Colour</li>
+        </ol>
+
+        <!-- Coding style section of design-->
+        <section title="codingStyle">
+            <h2 class="sectionTitle">1. Coding Style</h2>
+            <ul>
+                <li>Coded using Camel Case</li>
+                <ul>
+                    <li><code class="language-html">section title="codingStyle"</code></li>
+                </ul>
+                <li>Using tab spacing</li>
+                <li>All styling should be done within the style.css sheet</li>
+                <li>Using ID's and Classes where appropriate for styling</li>
+                <li>Classes/ID's are descriptive and meaningful</li>
+            </ul>
+        </section>
+
+        <!-- Layout section of design-->
+        <section title="layout">
+            <h2 class="sectionTitle">2. Layout</h2>
+            <p>
+                The layout for the website has been kept simple in order to ensure that its easy to use and
+                intuitive whilst also being in line with modern design principles and aesthetics.
+            </p>
+            <ul>
+                <li>3 main elements on every page of the website for the layout are:</li>
+                <ul>
+                    <li>Header/Navigation</li>
+                    <li>Main Content</li>
+                    <li>Footer</li>
+                </ul>
+                <li>The header/navbar and footer have a width of 100% of the browsers tab/window</li>
+                <li>The main content has a width of 75% and is centered</li>
+            </ul>
+        </section>
+
+        <!-- Navigation style section of design-->
+        <section title="navigation">
+            <h2 class="sectionTitle">3. Header/Navigation</h2>
+            <ul>
+                <li>Header and navbar has width of 100%</li>
+                <li>Navbar is integrated in with the header</li>
+                <li>When hovering over a menu item they will be underlined using the hover selector</li>
+                <li>
+                        <pre>
+                            <code class="language-css">
+                                    nav li a:hover {
+                                    background: none;
+                                    border-bottom: 2px solid white;
+                                    }
+                                </code>
+                        </pre>
+                </li>
+                <li>In order for the user to know where they are at any given time, the line remains under the menu
+                    option of the page they are on by adding a class within the html tag
+                </li>
+                <li>
+                        <pre>
+                            <code class="language-html">
+                                a href="design.html" class="active"
+                            </code>
+                        </pre>
+                </li>
+                <li>
+                        <pre>
+                            <code class="language-css">
+                                    nav li a:hover {
+                                    background: none;
+                                    border-bottom: 2px solid white;
+                                        }
+                            </code>
+                        </pre>
+                </li>
+                <li>
+                        <pre>
+                            <code class="language-css">
+                                    .active {
+                                    background: none;
+                                    border-bottom: 2px solid white;
+                                    }
+                                </code>
+                        </pre>
+                </li>
+            </ul>
+        </section>
+
+        <!-- User Inputs section of design-->
+        <section title="userInputs">
+            <h2 class="sectionTitle">4. User Inputs</h2>
+            <p>The user inputs will display textareas and buttons</p>
+            <ul>
+                <li>All textarea's are to be of the following design with placeholders<br><img src="images/textarea.png"
+                                                                                               alt="textarea example">
+                </li>
+                <li>All buttons on the cipher pages should be of the following design<br><img src="images/button.png"
+                                                                                              alt="button example"></li>
+            </ul>
+            <p>Textarea style:</p>
+            <pre>
+                <code class="language-css">
+                    textarea {
+                    width: 75%;
+                    height: 150px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                    font-size: 18px;
+                    }
+                </code>
+            </pre>
+            <p>
+                The button within the cipher pages are named accordingly within a class of cipherBtn.<br>
+                The button has shadow to add texture and also has a hover and active selector styled.
+            </p>
+            <pre>
+                <code class="language-css">
+                    .cipherBtn {
+                    display: block;
+                    margin-right: auto;
+                    margin-left: auto;
+                    font-size: 16px;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #0C457D;
+                    padding: 10px 20px;
+                    box-shadow: 7px 7px 7px #999;
+                    }
+
+                    .cipherBtn:hover {
+                    background-color: #123770;
+                    }
+
+                    .cipherBtn:active {
+                    background-color: #123770;
+                    box-shadow: 3px 3px 3px #999;
+                    transform: translateY(4px);
+                    }
+                </code>
+            </pre>
+        </section>
+
+        <!-- Typeography section of design-->
+        <section title="type">
+            <h2 class="sectionTitle">5. Typography</h2>
+            <p>
+                For the font used on the website, it was taken from Google Fonts and is called 'Raleway' which can be
+                found
+                <a href="https://fonts.google.com/specimen/Raleway">here</a> and was made
+                by Matt McInerney, Pablo Impallari and Rodrigo Fuenzalida.
+            </p>
+            <p>
+                The various font weights can be found below, which will display the 4 different weights that are
+                available to be used.
+            </p>
+            <div class="demoWeights">
+                <p id="demoAlphabet">
+                    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+                </p>
+
+                <div class="fontBtns">
+                    <button type="button" onclick="lightText()">Light 300</button>
+                    <button type="button" onclick="regText()">Regular 400</button>
+                    <button type="button" onclick="semiText()">Semi-bold 500</button>
+                    <button type="button" onclick="boldText()">bold 600</button>
+                </div>
+            </div>
+            <p>
+                Other elements of the typography such as headers can be found below alongside their styling.
+            </p>
+            <p>The standard default body styling is below:</p>
+            <pre>
+            <code class="language-css">
+                body {
+                margin: 0;
+                font-family: 'monsterrat', sans-serif;
+                font-weight: 400;
+                background-color: #eee;
+                font-size: 16px;
+                }
+                </code>
+            </pre>
+            <h3>Headers</h3>
+            <p>The headers are used for titles and subtitles within the website and are styled as follows;</p>
+            <h1>h1</h1>
+            <p>Header 1 (h1) has a font size of 2em which is about 24pt or 32px</p>
+            <h2>h2</h2>
+            <p>Header 2 (h2) has a font size of 1.5em which is about 18pt or 24px</p>
+            <h3>h3</h3>
+            <p>Header 3 (h3) has a font size of 1.25em which is about 14.5pt or 20px</p>
+        </section>
+
+        <!-- Colours section of design-->
+        <section title="colors">
+            <h2 class="sectionTitle">6. Color Themes</h2>
+            <ul>
+                <li>The colour for the background within the header/footer is hex #5f4c4c</li>
+                <li>The colour for the text within the header/footer is hex #ffffff</li>
+                <li>The colour for the text within the headers and main contents is 'black' as default</li>
+                <li>The colour for the line separating the contents between headers in design.html is ##999999</li>
+                <li>The colour for the cipher buttons background is hex #03457D</li>
+                <li>The colour for the cipher buttons hover/active is hex #123770</li>
+            </ul>
+        </section>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy Dean Pearson 2018, Student @ Edinburgh Napier University</p>
+</footer>
+</body>
+</html>

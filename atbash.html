@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Cipher Coursework</title>
+    <meta name="Description"
+          content="Encrypt and decrypt your message using a substiution cipher called Atbash. This is part of a university coursework.">
+    <meta name="Keywords" content="cipher, substitution, encrypt, decrypt, napier, university, cypher">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+
+<header>
+    <a href="index.html"><img src="images/logo.png" alt="logo that reads 'Cipher your secrets'"></a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="caesar.html">Caesar Cipher</a></li>
+            <li><a href="mirror.html">Mirror Writing Cipher</a></li>
+            <li><a href="atbash.html" class="active">AtbashCipher</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="main_content">
+
+    <div id="maincontainer">
+        <h1 class="title">Atbash Cipher</h1>
+        <p>
+            The Atbash Cipher is a simple substitution cipher, although not the most secure and quite easy
+            to decipher and figure out without a 'key', although the Atbash Cipher was originally designed
+            to encode the Hebrew alphabet.
+        </p>
+        <textarea id="atbashInput" title="Text for cipher"
+                  placeholder="Enter the text you would like to see atbashed here..."></textarea>
+        <br>
+        <button class="cipherBtn" onclick="atbashCipher(document.getElementById('atbashInput').value)">Click me</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy Dean Pearson 2018, Student @ Edinburgh Napier University</p>
+</footer>
+
+</body>
+</html>

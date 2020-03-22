@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Cipher Coursework</title>
+    <meta name="Description"
+          content="Encrypt and decrypt your message using a ROT13 cipher. This is part of a university coursework.">
+    <meta name="Keywords" content="cipher, RO13, encrypt, decrypt, napier, university, cypher">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+
+<!-- Header and Navbar  -->
+<header>
+    <a href="index.html"><img src="images/logo.png" alt="logo that reads 'Cipher your secrets'"></a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="caesar.html" class="active">Caesar Cipher</a></li>
+            <li><a href="mirror.html">Mirror Writing Cipher</a></li>
+            <li><a href="atbash.html">Atbash Cipher</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<div id="main_content">
+    <div id="maincontainer">
+        <h1 class="title">Caesar Cipher - ROT13</h1>
+
+        <p>
+            The Caesar Cipher was one of the first forms of 'encryption' and is one of the more well known encryption
+            techniques.<br>
+            ROT13 is one of the more common Caesar cipher variations and simple takes a letter, counts 13 places after
+            that letter and replaces it with the one it lands on i.e if you
+            put the letter A it will substitute A for N which is 13 places infront of A.
+        </p>
+
+        <p>
+            One kinda 'cool' thing about ROT13 is that it decrypts its self as well an encrypts its self. So the code I
+            have to encrypt your word/sentence is not changed,
+            so if you click on the button and click it again it will reverse the cipher.
+        </p>
+
+        <h3>Try it out for yourself:</h3>
+
+        <p>
+            Check out the alphabet listed below, if you hover over a letter it will change it to the ROT13 cipher
+            letter:
+        </p>
+        <!-- Interactivity of the ROT13 'alphabet' -->
+        <div id="letterselector">
+            <p class="borderletter" onmouseover="this.innerHTML='N';" onmouseout="this.innerHTML='A'">A</p>
+            <p class="borderletter" onmouseover="this.innerHTML='O';" onmouseout="this.innerHTML='B'">B</p>
+            <p class="borderletter" onmouseover="this.innerHTML='P';" onmouseout="this.innerHTML='C'">C</p>
+            <p class="borderletter" onmouseover="this.innerHTML='Q';" onmouseout="this.innerHTML='D'">D</p>
+            <p class="borderletter" onmouseover="this.innerHTML='R';" onmouseout="this.innerHTML='E'">E</p>
+            <p class="borderletter" onmouseover="this.innerHTML='S';" onmouseout="this.innerHTML='F'">F</p>
+            <p class="borderletter" onmouseover="this.innerHTML='T';" onmouseout="this.innerHTML='G'">G</p>
+            <p class="borderletter" onmouseover="this.innerHTML='U';" onmouseout="this.innerHTML='H'">H</p>
+            <p class="borderletter" onmouseover="this.innerHTML='V';" onmouseout="this.innerHTML='I'">I</p>
+            <p class="borderletter" onmouseover="this.innerHTML='W';" onmouseout="this.innerHTML='J'">J</p>
+            <p class="borderletter" onmouseover="this.innerHTML='X';" onmouseout="this.innerHTML='K'">K</p>
+            <p class="borderletter" onmouseover="this.innerHTML='Y';" onmouseout="this.innerHTML='L'">L</p>
+            <p class="borderletter" onmouseover="this.innerHTML='Z';" onmouseout="this.innerHTML='M'">M</p>
+            <p class="borderletter" onmouseover="this.innerHTML='A';" onmouseout="this.innerHTML='N'">N</p>
+            <p class="borderletter" onmouseover="this.innerHTML='B';" onmouseout="this.innerHTML='O'">O</p>
+            <p class="borderletter" onmouseover="this.innerHTML='C';" onmouseout="this.innerHTML='P'">P</p>
+            <p class="borderletter" onmouseover="this.innerHTML='D';" onmouseout="this.innerHTML='Q'">Q</p>
+            <p class="borderletter" onmouseover="this.innerHTML='E';" onmouseout="this.innerHTML='R'">R</p>
+            <p class="borderletter" onmouseover="this.innerHTML='F';" onmouseout="this.innerHTML='S'">S</p>
+            <p class="borderletter" onmouseover="this.innerHTML='G';" onmouseout="this.innerHTML='T'">T</p>
+            <p class="borderletter" onmouseover="this.innerHTML='H';" onmouseout="this.innerHTML='U'">U</p>
+            <p class="borderletter" onmouseover="this.innerHTML='I';" onmouseout="this.innerHTML='V'">V</p>
+            <p class="borderletter" onmouseover="this.innerHTML='J';" onmouseout="this.innerHTML='W'">W</p>
+            <p class="borderletter" onmouseover="this.innerHTML='K';" onmouseout="this.innerHTML='X'">X</p>
+            <p class="borderletter" onmouseover="this.innerHTML='L';" onmouseout="this.innerHTML='Y'">Y</p>
+            <p class="borderletter" onmouseover="this.innerHTML='M';" onmouseout="this.innerHTML='Z'">Z</p>
+        </div>
+
+        <br>
+        <!-- Footer -->
+        <textarea id="caesarInput" title="Text for cipher"
+                  placeholder="Enter the text you would like to cipher here..."></textarea>
+        <br>
+        <button class="cipherBtn" onclick="caesarsCipher()">Click me</button>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy Dean Pearson 2018, Student @ Edinburgh Napier University</p>
+</footer>
+
+</body>
+</html>

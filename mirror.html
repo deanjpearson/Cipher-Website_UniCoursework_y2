@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Cipher Coursework</title>
+    <meta name="Description"
+          content="Mirror your message, which can look confusing and even help keep it secret. This is part of a university coursework.">
+    <meta name="Keywords" content="cipher, mirror cipher, encrypt, decrypt, napier, university, cypher">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+
+<header>
+    <a href="index.html"><img src="images/logo.png" alt="logo that reads 'Cipher your secrets'"></a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="caesar.html">Caesar Cipher</a></li>
+            <li><a href="mirror.html" class="active">Mirror Writing Cipher</a></li>
+            <li><a href="atbash.html">Atbash Cipher</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="main_content">
+
+    <div id="maincontainer">
+
+        <h1 class="title">Mirror Writing Cipher</h1>
+
+        <p>I found Mirror Writing under the classical ciphers page on <a
+                href="https://en.wikipedia.org/wiki/Category:Classical_ciphers">Wikipedia</a>
+            although to me it did seem odd it was considered a cipher but as the Oxford Dictionary states a cipher is
+            <i>"A secret or disguised way of writing; a code."</i> so it does 'disguise' the text.
+        </p>
+
+        <p>Mirror Writing is actually fairly common and is used on some emergency service vehicles in the UK.</p>
+
+        <h3>Fun Fact</h3>
+        <p> Apparently Leonardo Da Vinci used to write his notes and personal messages with mirror
+            writing! I mean I don't know how successful he was at 'encrypting' his personal messages
+            but I am going to go ahead and say not very....but hey, it was early in the 16th Century so we have come
+            along
+            way since then and he done some pretty cool things!
+        </p>
+
+        <br>
+        <textarea id="mirrorInput" title="Text for cipher"
+                  placeholder="Enter the text you would like to see mirrored here..."></textarea>
+        <br>
+        <button class="cipherBtn" onclick="mirrorCipher()">Click me</button>
+        <br>
+        <textarea id="mirrorOutput" title="Text for cipher"></textarea>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy Dean Pearson 2018, Student @ Edinburgh Napier University</p>
+</footer>
+
+</body>
+</html>
